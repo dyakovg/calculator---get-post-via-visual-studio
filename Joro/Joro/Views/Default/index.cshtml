@@ -1,0 +1,47 @@
+﻿<div class="row">
+    <div class="col-md-4">
+        <h4>Входни данни</h4>
+        <p>
+        Променлива 1: @ViewBag.a<br />
+        Променлива 2: @ViewBag.b<br />
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h4>Резултат: (GET)</h4>
+        <p>
+        @ViewBag.result
+        </p>
+    </div>
+    <div class="col-md-4">
+        
+            <h4>Параметри на заявката</h4>
+            <p>
+               @foreach (var item in ViewBag.p)
+            {
+                  @item
+            }
+            </p>
+    </div>
+</div>
+<div class="row">
+    <div class="container">
+        <div class="row">
+            <form role="form" method="post" class="col-md-9 go-right">
+                <h2>Calculator</h2>
+                <div class="form-group">
+                    <input name="a" type="number" class="form-control" value="@ViewBag.a">
+                    <label for="name">First Param</label>
+                </div>
+                <div class="form-group">
+                    <input name="b" type="number" class="form-control" value="@ViewBag.b">
+                    <label for="name">Second Param</label>
+                </div>
+                <button type="submit" class="btn btn-success">Do magic</button>
+                <h4>Резултат: (POST)</h4>
+                <p>
+                    @ViewBag.resultat
+                </p>
+            </form>
+        </div>
+    </div>
+</div>
